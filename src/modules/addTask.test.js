@@ -1,4 +1,4 @@
-import { addTask, removeTask, taskLength } from "./operationFunctions.js";
+import { addTask, removeTask, taskLength, editTask, mark } from "./operationFunctions.js";
 // import "./setupTests.js";
 
 // Mock the localStorage object
@@ -41,7 +41,7 @@ describe("DOM Manipulation Functions", () => {
 </div>
 `;
 
-  // ... Rest of your test setup
+ // ... Rest of your test setup
   test("addTask should add a new task to the DOM", () => {
     expect(taskLength).toBe(0);
     // Simulate a task description
@@ -51,12 +51,36 @@ describe("DOM Manipulation Functions", () => {
     expect(taskLength).toBe(1);
     // Your assertions here to check if the task was added to the DOM
   });
-  test("removeTask should remove a task from the DOM", () => {
-    // Simulate an index of the task to remove
-    const taskIndexToRemove = 0;
-    // Call the removeTask function with the index
-    removeTask(taskIndexToRemove, localStorageMock);
-    // Your assertions here to check if the task was removed from the DOM
+
+  test("editTask should edit task in the DOM", () => {
+   
+    // Simulate a task description
+    const editDescription = "editTask";
+    // Call the editTask function with the task description
+    const response = editTask(1, editDescription, localStorageMock);
+    expect(response).toBe(editDescription);
+    // Your assertions here to check if the task was added to the DOM
   });
-  // Other test cases for other functions
-});
+
+
+  test("removeTask should remove task to the DOM", () => {
+    expect(taskLength).toBe(1);
+    // Simulate a task description
+    const taskDescription = "Sample Task";
+    // Call the removeTask function with the task description
+    removeTask(1, localStorageMock);
+    expect(taskLength).toBe(0);
+    // Your assertions here to check if the task was added to the DOM
+  });
+ 
+  test("markC should remove task to the DOM", () => {
+    expect(taskLength).toBe(1);
+    // Simulate a task description
+    const taskDescription = "Sample Task";
+    // Call the removeTask function with the task description
+    removeTask(1, localStorageMock);
+    expect(taskLength).toBe(0);
+    // Your assertions here to check if the task was added to the DOM
+  });
+ 
+ });
