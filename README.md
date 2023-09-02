@@ -119,6 +119,12 @@ npm run dev
 - Twitter: [@Kwamay3](https://twitter.com/Kwamay3)
 - LinkedIn: [Kwamay Adu](https://linkedin.com/in/кωαмαу-adu-2b396321a)
 
+👤 **Anold Mwagharo**
+
+- GitHub: [@MPDADDY](https://github.com/MPDADDY)
+- Twitter: [@anoldmwawasi](https://twitter.com/anold_mwawasi)
+- LinkedIn: [anoldmwawasi](https://www.linkedin.com/in/anold-mwawasi/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
