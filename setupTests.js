@@ -11,5 +11,3 @@ global.localStorage = {
 };
 
 // Now import this file at the beginning of your test files
-
-
