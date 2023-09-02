@@ -35,7 +35,7 @@ document.getElementById('list').addEventListener('click', (event) => {
     event.target.addEventListener('change', () => {
       const checkBoxInput = document.getElementById(`editForm-${idx}`);
       if (event.target.checked) {
-        checkedBox(idx);
+        checkedBox(idx, localStorage);
         // add strike class
         checkBoxInput.classList.add('strike');
       } else {
@@ -62,5 +62,5 @@ element.forEach((el) => {
 
 // Clear completed tasks
 document.getElementById('clear').addEventListener('click', () => {
-  clearCompletedTasks();
+  clearCompletedTasks(localStorage);
 });
